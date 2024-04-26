@@ -1,0 +1,34 @@
+
+.navUlLink {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLiLink {
+  display: inline;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.headerBg {
+  background-image: linear-gradient(rgb(237, 186, 171), rgb(255, 255, 255));
+}
+
+.MLR {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.MT {
+  margin-top: 20px;
+}
+
+.underline2 {
+  border-bottom: 4px black solid;
+}
+
+.navUlPosition {
+  position: absolute;
+  right: 20px;
+}
