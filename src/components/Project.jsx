@@ -1,9 +1,22 @@
-export default function Project(Name, image,) {
+import React, { useState } from 'react';
+
+export default function Project(props) {
+    const [isHovered, setIsHovered] = useState(false);
     return (
-    <div className="" id="project">
-        <img src={image} className="img-fluid" alt="">
-            <h3>This is {Name}</h3>
-        </img>
-    </div>
+        <a href={props.project[0]} style={{ position: 'relative', display: 'inline-block' }} className='BPS MB'>
+        <img
+            src={props.project[1]}
+            alt={props.project[2]}
+            style={{ width: '100%', height: 'auto', opacity: isHovered ? '0.5' : '1' }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        />
+        {isHovered && (
+            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'black' }}>
+            <h2>{props.project[2]}</h2>
+            <p>{props.project[3]}</p>
+            </div>
+        )}
+        </a>
     );
   }

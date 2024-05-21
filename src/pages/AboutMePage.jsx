@@ -1,7 +1,12 @@
+import pic from '../assets/me.jpg';
+
 export default function Footer() {
     return (
-    <div className="MLR MT" id="about-me">
-        <p>
+    <div className="MT d-flex flex-column align-items-center justify-content-center bodyBg" id="about-me">
+        <div>
+            <img src={pic} alt="A photo of me :)" className='img-fluid me-pic'/>
+        </div>
+        <p className="inside-text gradient-text">
             Hey, Im Danny, and Welcome to my Website. Let's see where to start 🤔, 
             I am currently pursuing a Bachelor's Degree in Computer Science at The University of Texas Rio Grande Valley(UTRGV). 
             I am currently 20 years old and a Senior, 
@@ -15,7 +20,7 @@ export default function Footer() {
             but if the opportunity presents itself then I'd love to learn about it from any work or internship that comes my way.
             At the moment I dont know many coding languages, I am just familiar with C++ and Java from which C++ was the language we had to use for our studies at UTRGV,
             then I picked up Java and OOP for Java at UTRGV as a course, 
-            and now I am familiar with JavaScript along with learning HTML, CSS, and Node, being able to setup a MERN (Mongoose, Express, React, Node) stack application.
+            and now I am familiar with JavaScript along with learning HTML, CSS, and the Node.js runtime environment, being able to setup a MERN (Mongoose, Express, React, Node) stack application.
             For now enjoy this speech of Lorem ipsum: 
             ipsum dolor sit amet consectetur adipisicing elit. 
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 

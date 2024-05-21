@@ -1,4 +1,6 @@
-
+body {
+  height: 100vh;
+}
 .navUlLink {
   list-style-type: none;
   padding: 0;
@@ -15,13 +17,21 @@
   background-image: linear-gradient(rgb(237, 186, 171), rgb(255, 255, 255));
 }
 
-.MLR {
+/* .bodyBg {
+  background-image: linear-gradient(rgb(0, 247, 41), rgb(0, 0, 0));
+} */
+
+/* .MLR {
   margin-left: 20%;
   margin-right: 20%;
-}
+} */
 
 .MT {
   margin-top: 20px;
+}
+
+.MB {
+  margin-bottom: 20px;
 }
 
 .underline2 {
@@ -31,4 +41,36 @@
 .navUlPosition {
   position: absolute;
   right: 20px;
+}
+
+.BPS {
+  border: 4px solid black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.inside-text {
+  width: 90%;
+}
+
+.footerDark {
+  background-color: black;
+}
+
+/* .gradient-text {
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(237, 186, 171));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+} */
+
+.me-pic {
+  min-height: 20vh;
+  max-height: 40vh;
+  border-radius: 50%;
+  border: 2px solid black;
 }

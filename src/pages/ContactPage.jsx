@@ -1,9 +1,11 @@
 export default function Footer() {
     return (
     <div className="" id="contact">
-        <p>Mobile Phone: #<a href="#">1(956)3797121</a></p>
-        <p>Email: <a href="#">dannyproa303@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/DannySanchez03">DannySanchez03</a></p>
+        <ul>
+            <li>Mobile Phone: #<a href="#">1(956)379-7121</a></li>
+            <li>Email: <a href="#">dannyproa303@gmail.com</a></li>
+            <li>GitHub: <a href="https://github.com/DannySanchez03">DannySanchez03</a></li>
+        </ul>
     </div>
     );
   }
