@@ -4,7 +4,7 @@ import c3 from '../assets/3Challenge.png';
 import c4 from '../assets/4Challenge.png';
 import c5 from '../assets/5Challenge.png';
 import c6 from '../assets/6Challenge.png';
-import c7 from '../assets/Star-Wars-Quiz.png';
+import c7 from '../assets/7Challenge.png';
 import c8 from '../assets/8Challenge.png';
 import c9 from '../assets/9Challenge.png';
 import c10 from '../assets/10Challenge.png';
