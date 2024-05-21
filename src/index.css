@@ -74,3 +74,24 @@ a {
   border-radius: 50%;
   border: 2px solid black;
 }
+
+/* Custom styles to ensure the navbar expands downwards properly */
+.navUlPosition {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-collapse {
+  flex-grow: 0; /* Prevent the navbar from growing too tall */
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    max-height: calc(100vh - 56px); /* Adjust for the navbar height */
+    overflow-y: auto;
+  }
+}
+
+.ML {
+  margin-left: 20px;
+}
