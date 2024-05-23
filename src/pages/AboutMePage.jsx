@@ -7,14 +7,14 @@ export default function Footer() {
             <img src={pic} alt="A photo of me :)" className='img-fluid me-pic'/>
         </div>
         <p className="inside-text gradient-text">
-            Hey, Im Danny, and Welcome to my Website. Let's see where to start 🤔, 
+            Hey, I'm Danny, and welcome to my website. Let's see where to start 🤔, 
             I am currently pursuing a Bachelor's Degree in Computer Science at The University of Texas Rio Grande Valley(UTRGV). 
             I am currently 20 years old and a Senior, 
-            I have 1 older brother who graduated as a Mechanical Enginner and 1 older sister that graduated as a Marketing major. 
-            At the time of making of this Website or portfolio I am currently enrolled at a FullStack Software Engineer bootcamp with UTSA. 
+            I have an older brother who graduated as a Mechanical Enginner and a older sister that graduated as a Marketing major. 
+            I was able to make this website because of the skills I learned from the UTSA FullStack Software Engineer bootcamp where I graduated with my certifcate for .this 😂. 
             I am really trying to push myself to become a good Software Enginner so I can support the people closest to me. 
             I am currently open and looking for internships either related to Computer Science with having to do with data or 
-            any type of positions for a Software Engineer (front-end or back-end)(preferably).
+            any type of positions for a Software Engineer (front-end or back-end)(is my preferred position).
             I'd like to stay away from anything that requires a foundation of knowing AI, 
             since at the moment I know nothing about it, 
             but if the opportunity presents itself then I'd love to learn about it from any work or internship that comes my way.
