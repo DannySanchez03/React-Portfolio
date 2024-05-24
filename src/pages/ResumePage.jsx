@@ -16,7 +16,7 @@ export default function Footer() {
             <li>- Familiar with CRUD operations and RESTful API'S</li>
             <li>- Familiar with GraphQL and Insomnia</li>
             <li>- Git version controls</li>
-            <li>- <a href={Resume}>Word Resume Here</a></li>
+            <li>- <a href={Resume} target="_blank">Word Resume Here</a></li>
         </ul>
     </div>
     );

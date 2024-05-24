@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function Project(props) {
     const [isHovered, setIsHovered] = useState(false);
     return (
-        <a href={props.project[0]} style={{ position: 'relative', display: 'inline-block' }} className='BPS MB'>
+        <a href={props.project[0]} target="_blank" style={{ position: 'relative', display: 'inline-block' }} className='BPS MB'>
         <img
             src={props.project[1]}
             alt={props.project[2]}
