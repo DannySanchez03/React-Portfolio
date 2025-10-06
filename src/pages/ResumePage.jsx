@@ -1,4 +1,5 @@
 import Resume from '../assets/Resume 2024.pdf'
+import Certificate from '../assets/Certificate.pdf'
 
 export default function Footer() {
     return (
@@ -17,6 +18,7 @@ export default function Footer() {
             <li>- Familiar with GraphQL and Insomnia</li>
             <li>- Git version controls</li>
             <li>- <a href={Resume} target="_blank">PDF Resume Here</a></li>
+            <li>- <a href={Certificate} target="_blank">UTSA Bootcamp Certificate</a></li>
         </ul>
     </div>
     );
