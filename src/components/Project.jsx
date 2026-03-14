@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-
 export default function Project(props) {
-    const [isHovered, setIsHovered] = useState(false);
-    return (
-        <a href={props.project[0]} target="_blank" style={{ position: 'relative', display: 'inline-block' }} className='BPS MB'>
-        <img
-            src={props.project[1]}
-            alt={props.project[2]}
-            style={{ width: '100%', height: 'auto', opacity: isHovered ? '0.5' : '1' }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        />
-        {isHovered && (
-            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'black' }}>
-            <h2>{props.project[2]}</h2>
-            <p>{props.project[3]}</p>
-            </div>
-        )}
-        </a>
-    );
+  const [href, imageSrc, title, type] = props.project;
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="dsProjectCard"
+    >
+      <div className="dsProjectMedia">
+        <img src={imageSrc} alt={title} className="dsProjectImg" loading="lazy" />
+      </div>
+      <div className="dsProjectOverlay">
+        <div className="dsProjectMeta">
+          <div className="dsProjectTitle">{title}</div>
+          <div className="dsProjectTag">{type}</div>
+        </div>
+        <div className="dsProjectCta">View project</div>
+      </div>
+    </a>
+  );
   }

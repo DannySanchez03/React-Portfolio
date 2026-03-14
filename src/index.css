@@ -1,50 +1,27 @@
+:root {
+  color-scheme: dark;
+  --ds-bg: #070814;
+  --ds-text: rgba(255, 255, 255, 0.92);
+  --ds-muted: rgba(255, 255, 255, 0.7);
+  --ds-border: rgba(255, 255, 255, 0.12);
+  --ds-glass: rgba(255, 255, 255, 0.06);
+  --ds-glowA: rgba(120, 87, 255, 0.35);
+  --ds-glowB: rgba(0, 209, 255, 0.25);
+  --ds-glowC: rgba(255, 108, 78, 0.22);
+  --ds-radius: 18px;
+}
+
+html,
 body {
-  height: 100vh;
+  height: 100%;
 }
-.navUlLink {
-  list-style-type: none;
-  padding: 0;
+
+body {
   margin: 0;
-}
-
-.navLiLink {
-  display: inline;
-  margin-right: 10px;
-  font-size: 24px;
-}
-
-.headerBg {
-  background-image: linear-gradient(rgb(237, 186, 171), rgb(255, 255, 255));
-}
-
-/* .bodyBg {
-  background-image: linear-gradient(rgb(0, 247, 41), rgb(0, 0, 0));
-} */
-
-/* .MLR {
-  margin-left: 20%;
-  margin-right: 20%;
-} */
-
-.MT {
-  margin-top: 20px;
-}
-
-.MB {
-  margin-bottom: 20px;
-}
-
-.underline2 {
-  border-bottom: 4px black solid;
-}
-
-.navUlPosition {
-  position: absolute;
-  right: 20px;
-}
-
-.BPS {
-  border: 4px solid black;
+  background: var(--ds-bg);
+  color: var(--ds-text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 a {
@@ -52,46 +29,456 @@ a {
   text-decoration: none;
 }
 
-.inside-text {
-  width: 90%;
-}
-
-.footerDark {
-  background-color: black;
-}
-
-/* .gradient-text {
-  background-image: linear-gradient(rgb(255, 255, 255), rgb(237, 186, 171));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-} */
-
-.me-pic {
-  min-height: 20vh;
-  max-height: 40vh;
-  border-radius: 50%;
-  border: 2px solid black;
-}
-
-/* Custom styles to ensure the navbar expands downwards properly */
-.navUlPosition {
+.appRoot {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appMain {
+  flex: 1;
+}
+
+.appBg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 600px at 10% 10%, var(--ds-glowA), transparent 60%),
+    radial-gradient(900px 600px at 90% 20%, var(--ds-glowB), transparent 60%),
+    radial-gradient(900px 600px at 40% 90%, var(--ds-glowC), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  filter: saturate(1.15);
+}
+
+.dsContainer {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.dsSection {
+  padding: 64px 0;
+}
+
+.dsSectionHeader {
+  margin-bottom: 24px;
+}
+
+.dsH1 {
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+
+.dsH2 {
+  font-size: 28px;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.dsH3 {
+  font-size: 18px;
+  margin: 0 0 12px;
+  color: var(--ds-text);
+}
+
+.dsLead {
+  margin: 0;
+  font-size: 16px;
+  color: var(--ds-muted);
+}
+
+.dsText {
+  color: var(--ds-muted);
+  line-height: 1.65;
+}
+
+.dsPanel {
+  background: var(--ds-glass);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius);
+  padding: 20px;
+  backdrop-filter: blur(14px);
+}
+
+.dsNav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--ds-border);
+  background: rgba(7, 8, 20, 0.55);
+  backdrop-filter: blur(18px);
+}
+
+.dsBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.dsBrandMark {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7b5cff, #00d1ff);
+  box-shadow: 0 0 0 4px rgba(123, 92, 255, 0.12);
+}
+
+.dsBrandText {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #32d74b;
+}
+
+.dsNavLink {
+  color: var(--ds-muted);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 10px 12px !important;
+  border-radius: 12px;
+}
+
+.dsNavLink:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ds-text);
+}
+
+.nav-link.active.dsNavLink {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ds-text);
+}
+
+.navbar-toggler {
+  border: 1px solid var(--ds-border);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgba(123, 92, 255, 0.35);
+}
+
+.navUlPosition {
   z-index: 1;
 }
 
-.navbar-collapse {
-  flex-grow: 0; /* Prevent the navbar from growing too tall */
+.dsHero {
+  padding: 56px 0 24px;
 }
 
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    max-height: calc(100vh - 56px); /* Adjust for the navbar height */
-    overflow-y: auto;
+.dsHeroGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .dsHeroGrid {
+    grid-template-columns: 1fr;
   }
 }
 
-.ML {
-  margin-left: 20px;
+.dsKicker {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--ds-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ds-muted);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.dsPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 22px;
+}
+
+.dsPill {
+  border: 1px solid var(--ds-border);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  padding: 7px 12px;
+  color: var(--ds-muted);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.dsHeroActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dsBtnPrimary,
+.dsBtnGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.dsBtnPrimary {
+  background: linear-gradient(135deg, #7b5cff, #00d1ff);
+  color: rgba(7, 8, 20, 0.92);
+}
+
+.dsBtnGhost {
+  border: 1px solid var(--ds-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ds-text);
+}
+
+.dsBtnGhost:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.dsHeroCard {
+  border-radius: calc(var(--ds-radius) + 8px);
+  border: 1px solid var(--ds-border);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 22px 80px rgba(0, 0, 0, 0.35);
+}
+
+.dsAvatar {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: calc(var(--ds-radius) + 6px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dsHeroCardBody {
+  margin-top: 14px;
+}
+
+.dsHeroCardName {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.dsHeroCardSub {
+  margin-top: 4px;
+  color: var(--ds-muted);
+}
+
+.dsAboutBody {
+  margin-top: 24px;
+}
+
+.dsProjectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .dsProjectGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dsProjectCard {
+  position: relative;
+  border-radius: calc(var(--ds-radius) + 8px);
+  overflow: hidden;
+  border: 1px solid var(--ds-border);
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(0);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.dsProjectCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+.dsProjectMedia {
+  position: relative;
+}
+
+.dsProjectImg {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.02);
+  transform: scale(1);
+  transition: transform 220ms ease;
+}
+
+.dsProjectCard:hover .dsProjectImg {
+  transform: scale(1.03);
+}
+
+.dsProjectOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 8, 20, 0.25),
+      rgba(7, 8, 20, 0.55) 45%,
+      rgba(7, 8, 20, 0.86)
+    );
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.dsProjectCard:hover .dsProjectOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dsProjectMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.dsProjectTitle {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.dsProjectTag {
+  flex: none;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ds-muted);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.dsProjectCta {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.dsContactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .dsContactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dsContactCard {
+  border-radius: var(--ds-radius);
+  border: 1px solid var(--ds-border);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  backdrop-filter: blur(14px);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.dsContactCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.dsContactLabel {
+  color: var(--ds-muted);
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.dsContactValue {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.dsResumeGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .dsResumeGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dsTagGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dsTag {
+  border-radius: 999px;
+  border: 1px solid var(--ds-border);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 7px 12px;
+  color: var(--ds-muted);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.dsDownloadList {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.dsDownload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 800;
+}
+
+.dsDownload:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.dsFooter {
+  padding: 18px 0;
+  border-top: 1px solid var(--ds-border);
+  background: rgba(7, 8, 20, 0.55);
+  backdrop-filter: blur(18px);
+}
+
+.dsFooterInner {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--ds-muted);
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .dsFooterInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

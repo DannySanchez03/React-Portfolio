@@ -1,37 +1,53 @@
 import pic from '../assets/me.jpg';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
-    <div className="MT d-flex flex-column align-items-center justify-content-center bodyBg" id="about-me">
-        <div>
-            <img src={pic} alt="A photo of me :)" className='img-fluid me-pic'/>
+    <section className="dsHero" id="about-me">
+      <div className="dsContainer dsHeroGrid">
+        <div className="dsHeroText">
+          <div className="dsKicker">Full‑Stack Developer</div>
+          <h1 className="dsH1">Building clean, fast web apps with personality.</h1>
+          <p className="dsLead">
+            I’m Danny — a computer science student who enjoys turning ideas into polished, usable products.
+            I work across the stack (MERN) and I’m actively looking for internships.
+          </p>
+
+          <div className="dsPills">
+            <span className="dsPill">React</span>
+            <span className="dsPill">Node.js</span>
+            <span className="dsPill">MongoDB</span>
+            <span className="dsPill">SQL</span>
+          </div>
+
+          <div className="dsHeroActions">
+            <Link className="dsBtnPrimary" to="/Portfolio">See work</Link>
+            <Link className="dsBtnGhost" to="/Contact">Get in touch</Link>
+          </div>
         </div>
-        <p className="inside-text gradient-text">
-            Hey there, I'm Danny, and it is my pleasure to welcome you to my website. 
-            Allow me to provide an introduction, currently cruising through a Bachelor's Degree in Computer science at The Texas Rio Grande Valley (UTRGV), 
-            I'm twenty years old and proudly stand as a senior, advancing steadily towards my academic goals. 
-            Within my family, my older brother conquered the mechanical engineering world and a sister who has flourished within the domain of marketing. 
-            Their successes serve as inspiration as I chart my own course in the realm of technology! 
 
-            Now, what's cooking on my plate? 💻Well, I've got my boots on the ground at a FullStack Software Engineer bootcamp with UTSA, 
-            a commitment I undertake with dedication. My aspiration is to cultivate an expertise in software engineering, 
-            driven by a desire to provide support to those closest to me. 
+        <div className="dsHeroCard">
+          <img src={pic} alt="A photo of me" className="dsAvatar" />
+          <div className="dsHeroCardBody">
+            <div className="dsHeroCardName">Danny Sanchez</div>
+            <div className="dsHeroCardSub">UTRGV • CS • Senior</div>
+          </div>
+        </div>
+      </div>
 
-            Currently, i'm on the hunt for internship that'll let me dive deep into the data-driven world of computer science or 
-            flex my muscles as a software engineer (front-end or back-end, you name it!).
-            🚀I'm steering clear of anything too AI-heavy for now, but hey, if the chance to dabble in the AI realm pops up, count me in for the adventure!
-
-
-            As for my coding toolkit, it's a work in progress. 
-            I've dabbled in C++ and Java during the UTRGV days, with Java and all its OOP goodness stealing the spotlight. 
-            Fast forward to now, I'm grooving with JavaScript, HTML, CSS, and strutting my stuff in the Node.js runtime environment. 
-            MERN stack? You betcha, I can whip up a storm with Mongoose, Express, React, and Node! 
-
-            So, who's ready to join me on this epic coding quest? No? Hear me out with this speech of Lorem ipsum: 
-            psum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Molestias eaque asperiores nemo quasi sint aliquam minus consequatur dolorum corporis consequuntur quas ducimus 
-            explicabo aliquid quisquam repudiandae dolorem odio, nostrum tempore! Lorem.
-        </p>
-    </div>
+      <div className="dsContainer dsAboutBody">
+        <div className="dsPanel">
+          <h2 className="dsH2">About</h2>
+          <p className="dsText">
+            I started out with C++ and Java (OOP + data structures), and now I build with JavaScript,
+            React, Node, and modern APIs. I like projects that mix thoughtful UI with solid backend logic.
+          </p>
+          <p className="dsText">
+            I’m especially interested in software engineering roles (frontend or backend) and products
+            where I can learn fast, contribute quickly, and ship features that feel great to use.
+          </p>
+        </div>
+      </div>
+    </section>
     );
   }

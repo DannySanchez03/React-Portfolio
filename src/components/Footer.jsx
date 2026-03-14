@@ -1,8 +1,11 @@
 export default function Footer() {
     return (
-    <div className="text-light text-center py-3 footerDark" id="footer-section">
-        <p>&copy; 2024 React in JSX 😁</p>
-    </div>
+    <footer className="dsFooter" id="footer-section">
+      <div className="dsContainer dsFooterInner">
+        <div className="dsFooterLeft">© {new Date().getFullYear()} Danny Sanchez</div>
+        <div className="dsFooterRight">Built with React + Vite</div>
+      </div>
+    </footer>
     );
   }
   

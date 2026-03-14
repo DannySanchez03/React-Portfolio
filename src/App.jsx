@@ -4,11 +4,14 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <div className="appRoot">
+      <div className="appBg" aria-hidden="true" />
       <Header />
-      <Outlet />
-      <Footer/>
-    </>
+      <main className="appMain">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

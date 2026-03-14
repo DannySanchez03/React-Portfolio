@@ -144,14 +144,19 @@ const project = [
 ];
 export default function portfolioPage() {
     return (
-    <div className="container MLR" id="portfolio">
-        <div className="row">
-            {project.map((project, index) => (
-            <div key={index} className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <Project project={project} />
-            </div>
-            ))}
+    <section className="dsSection" id="portfolio">
+      <div className="dsContainer">
+        <div className="dsSectionHeader">
+          <h2 className="dsH2">Selected Work</h2>
+          <p className="dsLead">A few projects from my journey so far.</p>
         </div>
-    </div>
+
+        <div className="dsProjectGrid">
+          {project.map((item, index) => (
+            <Project key={index} project={item} />
+          ))}
+        </div>
+      </div>
+    </section>
     );
   }

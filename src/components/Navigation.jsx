@@ -7,27 +7,28 @@ function NavTabs() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-opacity-0">
+      <nav className="navbar navbar-expand-lg dsNav">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <h1 className='display-1'>Danny</h1>
-          </a>
+          <Link className="navbar-brand dsBrand" to="/">
+            <span className="dsBrandMark" aria-hidden="true" />
+            <span className="dsBrandText">Danny Sanchez</span>
+          </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse ML navbar-collapse navUlPosition" id="navbarNavAltMarkup">
+          <div className="collapse navbar-collapse navUlPosition" id="navbarNavAltMarkup">
             <div className="navbar-nav ms-auto">
-              <Link to="/" className={currentPage === '/' ? 'nav-link active' : 'nav-link'}>
-                <h1 className='display-6'>About Me</h1>
+              <Link to="/" className={currentPage === '/' ? 'nav-link active dsNavLink' : 'nav-link dsNavLink'}>
+                About
               </Link>
-              <Link to="/Portfolio" className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}>
-                <h1 className='display-6'>Portfolio</h1>
+              <Link to="/Portfolio" className={currentPage === '/Portfolio' ? 'nav-link active dsNavLink' : 'nav-link dsNavLink'}>
+                Work
               </Link>
-              <Link to="/Contact" className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}>
-                <h1 className='display-6'>Contact</h1>
+              <Link to="/Contact" className={currentPage === '/Contact' ? 'nav-link active dsNavLink' : 'nav-link dsNavLink'}>
+                Contact
               </Link>
-              <Link to="/Resume" className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}>
-                <h1 className='display-6'>Resume</h1>
+              <Link to="/Resume" className={currentPage === '/Resume' ? 'nav-link active dsNavLink' : 'nav-link dsNavLink'}>
+                Resume
               </Link>
             </div>
           </div>
